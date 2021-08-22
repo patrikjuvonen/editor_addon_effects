@@ -54,8 +54,11 @@ local function createEffect(element)
         destroyElement(effectMatrix[element])
     end
 
+    local name = exports.edf:edfGetElementProperty(element, "name")
+    if (not name) then return end
+
     effectMatrix[element] = _createEffect(
-        exports.edf:edfGetElementProperty(element, "name"),
+        name,
         Vector3(exports.edf:edfGetElementPosition(element)),
         Vector3(exports.edf:edfGetElementRotation(element)),
         exports.edf:edfGetElementProperty(element, "drawDistance") or 100,
