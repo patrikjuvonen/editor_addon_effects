@@ -134,7 +134,7 @@ end)
 
 addEventHandler("onClientElementDimensionChange", localPlayer, function (_, newDimension)
     for element, effect in pairs(effectMatrix) do
-        if (getElementDimension(element) == newDimension) then
+        if (isElement(element)) and (getElementDimension(element) == newDimension) then
             createEffect(element)
         elseif (isElement(effect)) then
             destroyElement(effect)
@@ -144,7 +144,7 @@ end)
 
 addEventHandler("onClientElementInteriorChange", localPlayer, function (_, newInterior)
     for element, effect in pairs(effectMatrix) do
-        if (getElementInterior(element) == newInterior) then
+        if (isElement(element)) and (getElementInterior(element) == newInterior) then
             createEffect(element)
         elseif (isElement(effect)) then
             destroyElement(effect)
