@@ -35,24 +35,30 @@ local function createEffect(element)
         destroyElement(effectMatrix[element])
     end
 
-    setElementDimension(element, getElementData(element, "dimension"))
-    setElementInterior(element, getElementData(element, "interior"))
+    local existed = effectMatrix[element] ~= nil
 
-    addEventHandler("onClientElementDimensionChange", element, function (_, newDimension)
-        if (newDimension == getElementDimension(localPlayer)) then
-            createEffect(source)
-        elseif (isElement(effectMatrix[source])) then
-            destroyElement(effectMatrix[source])
-        end
-    end)
+    effectMatrix[element] = true
 
-    addEventHandler("onClientElementInteriorChange", element, function (_, newInterior)
-        if (newInterior == getElementInterior(localPlayer)) then
-            createEffect(source)
-        elseif (isElement(effectMatrix[source])) then
-            destroyElement(effectMatrix[source])
-        end
-    end)
+    if (not existed) then
+        setElementDimension(element, getElementData(element, "dimension"))
+        setElementInterior(element, getElementData(element, "interior"))
+
+        addEventHandler("onClientElementDimensionChange", element, function (_, newDimension)
+            if (newDimension == getElementDimension(localPlayer)) then
+                createEffect(source)
+            elseif (isElement(effectMatrix[source])) then
+                destroyElement(effectMatrix[source])
+            end
+        end)
+
+        addEventHandler("onClientElementInteriorChange", element, function (_, newInterior)
+            if (newInterior == getElementInterior(localPlayer)) then
+                createEffect(source)
+            elseif (isElement(effectMatrix[source])) then
+                destroyElement(effectMatrix[source])
+            end
+        end)
+    end
 
     if (getElementDimension(element) == getElementDimension(localPlayer)) and (getElementInterior(element) == getElementInterior(localPlayer)) then
         effectMatrix[element] = _createEffect(
