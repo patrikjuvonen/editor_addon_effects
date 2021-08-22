@@ -4,6 +4,8 @@ You want to add effects inside the MTA:SA Map Editor? You've come to the right p
 
 ![Screenshot](screenshot.jpg)
 
+![Screenshot 2](screenshot_2.jpg)
+
 ## Installation
 
 1. Download the latest release
