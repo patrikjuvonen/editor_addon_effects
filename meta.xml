@@ -25,10 +25,27 @@
     SOFTWARE.
 -->
 <meta>
-    <info type="script" name="Effects Add-on for Map Editor" description="An add-on for the Map Editor to create and edit effects." author="patrikjuvonen" version="1.0.1" edf:definition="editor_addon_effects.edf" />
+    <info type="script" name="Effects Add-on for Map Editor" description="An add-on for the Map Editor to create and edit effects." author="patrikjuvonen" version="1.1.0" edf:definition="editor_addon_effects.edf" />
 
-    <file src="icon.png" />
+    <file src="addon_effect.png" />
+    <file src="addon_particle_blood.png" />
+    <file src="addon_particle_bullet_impact.png" />
+    <file src="addon_particle_bullet_splash.png" />
+    <file src="addon_particle_debris.png" />
+    <file src="addon_particle_foot_splash.png" />
+    <file src="addon_particle_glass.png" />
+    <file src="addon_particle_gunshot.png" />
+    <file src="addon_particle_punch_impact.png" />
+    <file src="addon_particle_sparks.png" />
+    <file src="addon_particle_tank_fire.png" />
+    <file src="addon_particle_tyre_burst.png" />
+    <file src="addon_particle_water_hydrant.png" />
+    <file src="addon_particle_water_splash.png" />
+    <file src="addon_particle_wood.png" />
 
-    <!-- To run add-on logic for maps made to work with the add-on -->
-    <script src="c_manager.lua" type="client" />
+    <!-- To run add-on effect logic for maps made to work with the add-on -->
+    <script src="c_effect_manager.lua" type="client" />
+
+    <!-- To run add-on particle logic for maps made to work with the add-on -->
+    <script src="c_particle_manager.lua" type="client" />
 </meta>

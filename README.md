@@ -17,13 +17,13 @@ You want to add effects inside the MTA:SA Map Editor? You've come to the right p
 2. Click "definitions" from the top editor menu
 3. Add "editor_addon_effects" to your definitions and press OK
 4. Hover on the buttons in the bottom-left corner, and scroll your mouse wheel once
-5. Click the "Effect" button to place a new effect into the game world
+5. Click the "Effect" button to place a new effect into the game world, there are also many particle types you can place into the game world
 6. Double-click the effect to change its properties, such as type, draw distance, sound, density, speed and respawn
 7. Once you've finished with your map, save the map in a resource
 
 ## How to use with a saved map
 
-Start your map resource **together** with this `editor_addon_effects` resource, and you should be able to see the effects placed in the game world using your defined settings!
+Start your map resource **together** with this `editor_addon_effects` resource, and you should be able to see the effects and particles placed in the game world using your defined settings!
 
 ## License
 
