@@ -25,7 +25,7 @@
     SOFTWARE.
 -->
 <meta>
-    <info type="script" name="Effects Add-on for Map Editor" description="An add-on for the Map Editor to create and edit effects." author="patrikjuvonen" version="1.0.0" edf:definition="editor_addon_effects.edf" />
+    <info type="script" name="Effects Add-on for Map Editor" description="An add-on for the Map Editor to create and edit effects." author="patrikjuvonen" version="1.0.1" edf:definition="editor_addon_effects.edf" />
 
     <file src="icon.png" />
 
